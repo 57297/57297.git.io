@@ -26,11 +26,11 @@ $(function() {
       
     $("#check").click(function(){ 
         if ($(".input").val() == code && code != 9999) {  
-            alert("正确!")
+            alert("正确!")；
 window.location.href = "http://jws.hebiace.edu.cn";  
         }
  else {  
-            alert("输入有误!")
+            alert("输入有误!")；
 window.location.reload(); 
         }  
     });  
