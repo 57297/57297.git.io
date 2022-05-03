@@ -161,23 +161,23 @@
                                 <br />
                                 <input type="password" id="input_password" class="fadeIn third" name="j_password" maxlength="13" placeholder="密码">
                                 <br />
+
+                                <!--验证码-->
+                                <div>
+                                    <span id="code"></span>
+                                    <input type="text" maxlength="4" class="input" placeholder="验证码"><br />
+
+
+                                    <script type="text/javascript" src="js/1.js"></script>
+                                    <script type="text/javascript" src="js/code.js"></script>
+                                </div>
+                                <!---->
+                                <br />
+                                <input type="submit" id="check" class="fadeIn fourth" value="登 录" onclick="$(&#39;#input_password&#39;).val(hex_md5($(&#39;#input_password&#39;).val()));">
+                                <div class="fadeIn fourth" style="line-height: 59px;margin-top:10px;">
+                                    <a href="http://jws.hebiace.edu.cn" onclick="toModifyPwd();">忘记密码？</a>
+                                </div>
                             </form>
-                            <!--验证码-->
-                            <div>
-                                <span id="code"></span>
-                                <input type="text" maxlength="4" class="input" placeholder="验证码"><br />
-
-
-                                <script type="text/javascript" src="js/1.js"></script>
-                                <script type="text/javascript" src="js/code.js"></script>
-                            </div>
-                            <!---->
-                            <br />
-                            <input type="submit" id="check" class="fadeIn fourth" value="登 录" onclick="$(&#39;#input_password&#39;).val(hex_md5($(&#39;#input_password&#39;).val()));">
-                            <div class="fadeIn fourth" style="line-height: 59px;margin-top:10px;">
-                                <a href="http://jws.hebiace.edu.cn" onclick="toModifyPwd();">忘记密码？</a>
-                            </div>
-
 
 
                             <form id="to_modify_pwd">
