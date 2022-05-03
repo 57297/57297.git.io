@@ -52,14 +52,6 @@
     </style>
 
 
-    <script type="text/javascript">
-        function refreshCaptcha() {
-            var img = document.getElementById("captchaImg");
-            img.src = "captchaImg?rnd=" + Math.random();
-        }
-    </script>
-
-
 </head>
 
 
@@ -69,7 +61,8 @@
 
 
     <center>
-        <div style="background-color: white; width: 35%; opacity: 0.9; border-radius: 15px;margin-top:100px;">
+        <div style="background-color: white; width: 35%; opacity: 0.9; border-radius: 15px;">
+            <input type="hidden" id="schoolCode" name="schoolCode" value="100006">
 
             <div class="wrapper fadeInDown">
                 <div id="formContent">
@@ -157,28 +150,29 @@
                     <!--jieshu-->
                     <!-- Login Form -->
 
-                    <form class="form-signin"  action="http://jws.hebiace.edu.cn" method="post" id="native">
+                    <form class="form-signin" action="http://jws.hebiace.edu.cn/" method="post" id="native">
 
                         <input id="remainingTime" type="hidden" value="">
-                        <input type="text" id="input_username" name="j_username" class="fadeIn second" maxlength="10" placeholder="学号">
+                        <input type="text" id="input_username" name="j_username" class="fadeIn second" maxlength="50" placeholder="学号">
                         <br />
-                        <input type="password" id="input_password" class="fadeIn third" name="j_password" maxlength="10" placeholder="密码">
+                        <input type="password" id="input_password" class="fadeIn third" name="j_password" maxlength="50" placeholder="密码">
                         <br />
+
+
 
                         <span id="code" class="nocode">验证码</span>
-                        <input type="text" class="input" placeholder="验证码"maxlength="4" />
+                        <input type="text" class="input" maxlength="4" placeholder="验证码" />
+
                         <script src="js/1.js"></script>
                         <script type="text/javascript" src="js/code.js"></script>
-
 
                         <br />
                         <input type="submit" id="check" class="fadeIn fourth" value="登 录" onclick="$(&#39;#input_password&#39;).val(hex_md5($(&#39;#input_password&#39;).val()));">
                         <div class="fadeIn fourth" style="line-height: 59px;margin-top:10px;">
-                            <a href="http://jws.hebiace.edu.cn" onclick="toModifyPwd();">忘记密码？</a>
+                            <a href="javascript:void(0);" onclick="toModifyPwd();">忘记密码？</a>
                         </div>
 
                     </form>
-
 
                     <form id="to_modify_pwd">
                         <input type="hidden" name="username">
