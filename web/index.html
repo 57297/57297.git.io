@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>河北建筑工程学院</title>
+    <title>河北建筑大学</title>
     <link rel="shortcut icon" href="http://jws.hebiace.edu.cn/style/base/favicon.ico" type="image/x-icon">
     <LINK rel="icon" type="image/x-icon" href="style/base/favicon.ico">
 
@@ -37,10 +37,6 @@
             border: 0;
         }
 
-
-
-
-
         body {
             background: #56baed;
             background-size: 100% 100%;
@@ -72,7 +68,7 @@
                         <span class="css-00F">
                             <b>
                                 <br><br>
-                                欢迎登陆 河北建筑工程学院  <br>
+                                欢迎登陆 河北建筑大学  <br>
                                 教务管理系统
                             </b>
                         </span>
@@ -172,26 +168,17 @@
 
                     </form>
                             </div>
-
-
-
-
                         <!--验证码-->
 
                         <br />
                         <div class="fadeIn fourth" style="line-height: 59px;margin-top:10px;">
                             <a href="http://jws.hebiace.edu.cn" onclick="toModifyPwd();">忘记密码？</a>
                         </div>
-
-                    
-
                     <form id="to_modify_pwd">
                         <input type="hidden" name="username">
                     </form>
 
                     <!-- Remind Passowrd -->
-
-
                 </div>
             </div>
         </div>
@@ -228,8 +215,7 @@
             var input_code = document.getElementById('vcode').value;
             if (input_code.toLowerCase() == code.toLowerCase()) {
                 //验证码正确(表单提交)
-                alert("正确的验证码!");
-                window.location.href = "www.baidu.com";
+                alert("验证码正确!");
             }
             else {
                 alert("请输入正确的验证码!");
