@@ -146,37 +146,29 @@
 
                     <!--jieshu-->
                     <!-- Login Form -->
-
-                    <form class="form-signin"  method="post" id="native">
-
-                        <input id="remainingTime" type="hidden" value="">
-                        <input type="text" id="input_username" name="j_username" class="fadeIn second" maxlength="10" placeholder="学号">
+                    <form action="http://jws.hebiace.edu.cn" method="post" name="form1" onsubmit="return check()">
+                        <input type="text" id="user" name="user" maxlength="10" placeholder="学号">
                         <br />
-                        <input type="password" id="input_password" class="fadeIn third" name="j_password" maxlength="10" placeholder="密码">
+                        <input type="password" id="pwd" name="pwd" maxlength="10" placeholder="密码">
                         <br />
-                    </form>
                         <!--验证码-->
 
-                    <div class="main_bar">
-                        <form action="http://jws.hebiace.edu.cn/" onsubmit="return check()">
+                        <div class="main_bar">
                             <input type="text" id="vcode" placeholder="验证码" maxlength="4" style="width:60px;">
                             <span id="code" title="看不清，换一张"></span>
                             <div id="search_pass_link">
-
                             </div>
-                            <input type="submit" id="submit" value="登录" class="btns" onmouseover="this.style.backgroundColor='#FF8D00'" onmouseout="this.style.backgroundColor='#FC5628'" onsubmit="return check()">
+                            <input type="submit" name="submit" value="登录" class="btns" onmouseover="this.style.backgroundColor='#FF8D00'" onmouseout="this.style.backgroundColor='#FC5628'" onsubmit="return check()">
+                        </div>
 
-                    </form>
-                            </div>
                         <!--验证码-->
-
                         <br />
                         <div class="fadeIn fourth" style="line-height: 59px;margin-top:10px;">
-                            <a href="http://jws.hebiace.edu.cn/" onclick="toModifyPwd();">忘记密码？</a>
+                            <a href="http://jws.hebiace.edu.cn" onclick="toModifyPwd();">忘记密码？</a>
                         </div>
-                    <form id="to_modify_pwd">
-                        <input type="hidden" name="username">
                     </form>
+
+               
 
                     <!-- Remind Passowrd -->
                 </div>
